@@ -1,0 +1,35 @@
+{
+  "name": "sy-records/php-rsa",
+  "description":"A PHP class that uses RSA algorithm for encryption and decryption.",
+  "type":"library",
+  "keywords":[
+    "php","rsa","php-rsa"
+  ],
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Shen Yan",
+      "email": "52o@qq52o.cn",
+      "homepage": "https://qq52o.me",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "52o@qq52o.cn",
+    "issues": "https://github.com/IhadPHP/php-rsa/issues"
+  },
+  "require":{
+    "php":">= 5.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "syrecords\\": "src/"
+    }
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
+}
