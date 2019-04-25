@@ -41,4 +41,13 @@ class Aes
         return $decrypted;
     }
     
+    public static function encrypt($data, $key) {
+        $data =  openssl_encrypt($data, 'aes-128-ecb', $key, OPENSSL_RAW_DATA);
+        return base64_encode($data);
+    }
+
+    public static function decrypt($data, $key) {
+        $encrypted = base64_decode($data);
+        return openssl_decrypt($encrypted, 'aes-128-ecb', $key, OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING );
+    }
 }
