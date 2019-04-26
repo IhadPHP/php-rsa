@@ -42,7 +42,7 @@ class Aes
     }
     
     public static function encrypt($data, $key) {
-        $data =  openssl_encrypt($data, 'aes-128-ecb', $key, OPENSSL_RAW_DATA);
+        $data =  openssl_encrypt($data, 'aes-128-ecb', $key, OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING );
         return base64_encode($data);
     }
 
